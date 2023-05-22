@@ -1,5 +1,9 @@
 //your JS code here. If required.
 const element=document.createElemet('h1');
-element.innerText=Width:${window.innerWidth} and Height ${window.innerHeight}
+element.innerText='Width:${window.innerWidth} and Height ${window.innerHeight}';
 
 document.body.append(element);
+
+window.onresize=function(){
+	element.innerText= 'Width:${window.innerWidth} and Height ${window.innerHeight}';
+}
