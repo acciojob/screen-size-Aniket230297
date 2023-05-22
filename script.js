@@ -1,9 +1,13 @@
 //your JS code here. If required.
-const element=document.createElemet('h1');
-element.innerText='Width:${window.innerWidth} and Height ${window.innerHeight}';
+function updateSize() {
+    var width = window.innerWidth;
+    var height = window.innerHeight;
 
-document.body.append(element);
+    document.getElementById("size").innerHTML = "Width: " + width + "px, Height: " + height + "px";
+  }
 
-window.onresize=function(){
-	element.innerText= 'Width:${window.innerWidth} and Height ${window.innerHeight}';
-}
+  // Call updateSize on initial page load
+  updateSize();
+
+  // Call updateSize on window resize
+  window.onresize = updateSize;
